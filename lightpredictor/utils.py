@@ -9,9 +9,12 @@ from lxml import etree
 def predict( model, values ):
     tree = etree.parse(model)
     root = tree.getroot()
+
     #TODO: check values into DataDictionary
     if 'TreeModel' in [ etree.QName(e).localname for e in root ]:
         return predictTreeModel( model, values )
+    
+    raise Exception("Only TreeModel suported at this time. Be free to contribute!")   
 
 def predictTreeModel( model, values ):
     predict = None
