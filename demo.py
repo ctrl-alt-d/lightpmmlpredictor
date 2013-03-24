@@ -29,4 +29,17 @@ if __name__ == '__main__':
         
     prediccio = utils.predict('pmml-models/dt.pmml', values)
     print prediccio
+
+    values = {}
+    values['nom_nivell'] = 'ESO'
+    values['hora_inici'] = '09:15:00'
+    values['assistenciaMateixaHora1WeekBefore'] = 'NA'
+    values['assistenciaMateixaHora2WeekBefore'] = 'NA'
+    values['assistenciaMateixaHora3WeekBefore'] = 'NA'
+    values['assistenciaaHoraAnterior'] = 'NA'
+        
+    prediccio = utils.predict('pmml-models/dt.pmml', values)
+    print prediccio
+
+
     
