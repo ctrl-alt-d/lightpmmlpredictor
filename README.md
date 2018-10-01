@@ -14,3 +14,8 @@ Sample:
     values['has_milk'] = 'N/A'
 
     must_to_check = utils.predict('pmml-models/my-model.pmml', values)
+    
+    ### ToDo:
+    
+    * Migrate to Python3.
+    * Check PMML versions.
